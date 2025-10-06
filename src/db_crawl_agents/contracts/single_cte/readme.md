@@ -1,0 +1,1 @@
+queryspecs (single_cte_task) -> (exection_results, single_cte_output) 

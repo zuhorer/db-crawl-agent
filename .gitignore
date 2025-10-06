@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+data
+.DS_Store
+openai_chatmodel_test_original.ipynb
+langchain_workflow_testing_original.ipynb
+
+test_feature_orchestrator.ipynb
+package_test_feature_orchestrator.ipynb

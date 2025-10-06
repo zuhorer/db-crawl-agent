@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "db-crawl-agents"
+version = "0.0.7"
+description = "Agentic core for DB crawling."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Yash Raj Singh", email = "yashbhadauria@gmail.com" }]
+keywords = ["agents", "database", "planner", "executor", "LLM"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "typing-extensions>=4.8.0; python_version<'3.11'",
+  "requests>=2.32.0",
+  "pydantic>=2.0,<3",
+  "langchain-core==0.3.76",
+  "langchain-community==0.3.29",
+  "langchain==0.3.27",
+  "openai==1.107.2",
+  "langgraph==0.6.7"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "mypy>=1.9",
+  "black>=24.0",
+  "build>=1.2.1",
+  "twine>=5.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/zuhorer/DB-CRAWL"
+Issues = "https://github.com/zuhorer/DB-CRAWL/issues"
+
+
+
+[tool.hatch.build.targets.wheel]
+force-include = { "src/db_crawl_agents" = "db_crawl_agents" }
+
+[tool.hatch.build.sources]
+db_crawl_agents = "src/db_crawl_agents"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/db_crawl_agents/**",
+  "pyproject.toml",
+  "README.md",
+  "LICENSE",
+]
