@@ -1,0 +1,50 @@
+site_name: db-crawl
+site_description: Agentic framework that translates natural language into analytic features and SQL.
+repo_url: https://github.com/YOUR_USERNAME/db-crawl
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+    - content.action.edit
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - def_list
+  - tables
+
+nav:
+  - Overview: index.md
+  - Quickstart: quickstart.md
+  - Concepts:
+      - Architecture: concepts/architecture.md
+      - Feature Orchestrator: concepts/feature-orchestrator.md
+      - Task Decomposer: concepts/task-decomposer.md
+      - Executor: concepts/executor.md
+  - Guides:
+      - AWS RDS (Postgres): guides/aws-rds.md
+      - Schema Introspection: guides/schema-introspection.md
+      - Caching with Graph-Memo: guides/caching-with-graph-memo.md
+  - API Reference:
+      - Python: api/python.md
+  - Deploy & Ops:
+      - Docker: deploy/docker.md
+      - AWS ECS/Fargate: deploy/aws-ecs-fargate.md
+  - Examples:
+      - Minimal App: examples/minimal_app.md
