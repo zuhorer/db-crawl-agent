@@ -1,29 +1,8 @@
-# DB-CRAWL-AGENT
-Agentic framework that translates natural language queries into analytic features, decomposes them into SQL tasks, executes them across databases, and leverages graph-based memoization for reuse.
-
-Table of Contents
-1.	Overview
-2.  Mathematical Foundations of Graph-Memoized Reasoning
-
-
-# Overview
-
-db-crawl is an agentic data-analysis framework that lets you query structured data warehouses using natural language.
-It decomposes human intent into features, tasks, and SQL plans, then executes them across databases such as PostgreSQL, Snowflake, and AWS RDS.
-
-User Query → Feature Orchestrator → Task Decomposer → SQL Executor → Insight Generator
-
-Key Goals:
-	•	LLM-driven feature reasoning
-	•	Automated SQL generation
-	•	Reuse via graph-memoization
-	•	Multi-database compatibility
-
 # Mathematical Foundations of Graph-Memoized Reasoning
 
 The decision-graph memoization layer in **db-crawl** is not merely a system optimization — it is grounded in mathematical optimization principles that define how agentic reasoning can be made efficient, consistent, and auditable.
 
-### Optimization over Graph States
+## Optimization over Graph States
 
 Each reasoning workflow can be represented as a property graph  
 \( G = (V, E) \),  
@@ -36,7 +15,6 @@ The system seeks an **optimal reasoning graph** that minimizes total computation
    = \text{Cost}(G) + \lambda \, \text{Inconsistency}(G)
 \]
 
-
 - **Cost(G)** represents resource usage: number of LLM calls, latency, or plan complexity.  
 - **Inconsistency(G)** captures logical or causal divergence across equivalent reasoning paths.  
 - **λ** is a Lagrange-like hyperparameter balancing efficiency and reliability.
@@ -46,7 +24,7 @@ Practical solvers combine:
 - **Gradient-based methods** for differentiable parameters (confidence, utility scores).  
 - **Combinatorial search or relaxations** (e.g., Gumbel-Softmax, simulated annealing) for discrete structure updates.
 
-### Constrained Optimization for Causal Consistency
+## Constrained Optimization for Causal Consistency
 
 Causal consistency introduces structural constraints on permissible graph edges.  
 For a directed acyclic reasoning graph (DAG),  
@@ -78,7 +56,18 @@ where typical objectives are:
 The result is a **Pareto frontier** of reasoning graphs, each offering a different trade-off between utility and ethics.  
 Selecting among them involves *multi-objective optimization* techniques (weighted sums, evolutionary methods, or Pareto ranking).
 
-### Summary
+## Mathematical Tools and Relevance
+
+| Mathematical Area | Role in the System |
+|--------------------|-------------------|
+| **Linear Algebra & Matrix Calculus** | Representing edge weights, gradients, and similarity metrics. |
+| **Convex Analysis** | Designing smooth surrogate losses (Cost + Penalty) and guaranteeing convergence. |
+| **Combinatorial Optimization** | Searching and memoizing discrete graph structures. |
+| **Constrained Optimization** | Enforcing causal consistency and schema alignment. |
+| **Multi-Objective Optimization** | Balancing efficiency, fairness, and interpretability. |
+| **Causal Inference** | Embedding directionality and intervention semantics into edge constraints. |
+
+## Summary
 
 Mathematically, the **memoization layer** transforms reasoning reuse into an optimization problem defined over structured decision graphs.  
 It blends **continuous optimization** (for model parameters and scores) with **discrete optimization** (for structural choices and cache retrieval), while maintaining causal and ethical constraints.  
