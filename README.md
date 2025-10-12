@@ -63,7 +63,7 @@ where \( h(G) \) encodes acyclicity and dependency rules.
 This enables **identifiability** — ensuring that updates or agent inferences remain explainable and reproducible under schema changes.  
 Constraint handling follows classical **Lagrangian** and **KKT** formulations, allowing causal rules to act as soft or hard regularizers.
 
-## Multi-Objective Optimization for Ethical Reasoning
+### Multi-Objective Optimization for Ethical Reasoning
 
 Beyond efficiency, trustworthy systems must optimize across **multiple conflicting objectives**:
 
