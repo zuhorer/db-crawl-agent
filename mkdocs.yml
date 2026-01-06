@@ -1,6 +1,8 @@
-site_name: db-crawl
+site_name: db-crawl-agent
 site_description: Agentic framework that translates natural language into analytic features and SQL.
-repo_url: https://github.com/YOUR_USERNAME/db-crawl
+repo_url: https://github.com/zuhorer/db-crawl-agent/
+site_url: https://zuhorer.github.io/db-crawl-agent/
+ 
 
 theme:
   name: material
