@@ -56,17 +56,6 @@ where typical objectives are:
 The result is a **Pareto frontier** of reasoning graphs, each offering a different trade-off between utility and ethics.  
 Selecting among them involves *multi-objective optimization* techniques (weighted sums, evolutionary methods, or Pareto ranking).
 
-## Mathematical Tools and Relevance
-
-| Mathematical Area | Role in the System |
-|--------------------|-------------------|
-| **Linear Algebra & Matrix Calculus** | Representing edge weights, gradients, and similarity metrics. |
-| **Convex Analysis** | Designing smooth surrogate losses (Cost + Penalty) and guaranteeing convergence. |
-| **Combinatorial Optimization** | Searching and memoizing discrete graph structures. |
-| **Constrained Optimization** | Enforcing causal consistency and schema alignment. |
-| **Multi-Objective Optimization** | Balancing efficiency, fairness, and interpretability. |
-| **Causal Inference** | Embedding directionality and intervention semantics into edge constraints. |
-
 ## Summary
 
 Mathematically, the **memoization layer** transforms reasoning reuse into an optimization problem defined over structured decision graphs.  
