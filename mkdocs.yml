@@ -43,6 +43,7 @@ nav:
       - AWS RDS (Postgres): guides/aws-rds.md
       - Schema Introspection: guides/schema-introspection.md
       - Caching with Graph-Memo: guides/caching-with-graph-memo.md
+      - Openai integration: guides/open_ai_chat_model_integration.md
   - API Reference:
       - Python: api/python.md
   - Deploy & Ops:
