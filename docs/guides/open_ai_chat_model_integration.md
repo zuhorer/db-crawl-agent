@@ -95,4 +95,3 @@ The OpenAI chat integration is a format adapter with three core concerns:
 	•	Execution: OpenAI chat completion call
 	•	Output: OpenAI tool calls → db-crawl tool calls
 
-Nothing more, nothing less.
